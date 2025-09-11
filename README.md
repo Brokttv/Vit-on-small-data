@@ -10,6 +10,15 @@ Vision Transformers (ViTs) are among the most impactful architectural innovation
 ---
 ## ⚙️ Experiment Configuration
 
+
+As widely recognized, the primary reason behind Vision Transformers (ViTs) underperforming on small datasets is their lack of *instant inductive bias*. ViTs gradually accumulate meaningful feature representations but typically require large datasets and prolonged training to do so effectively. 
+
+In contrast, Convolutional Neural Networks (CNNs) excel at extracting high-level features early in training due to their convolutional layers, which inherently encode spatial inductive bias.
+
+To address this gap, we replaced the raw linear patchification step in vanilla ViTs with a **3-block CNN-based patch embedding**. This small change introduces inductive bias from the very first layer, resulting in **faster convergence** and **better accuracy** on small datasets such as CIFAR-10.
+
+<br>
+
 | **Component**          | **Value** |
 |------------------------|-----------|
 | **Dataset**            | CIFAR-10 |
