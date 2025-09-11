@@ -1,2 +1,4 @@
 # Vit-on-small-data
-In this repo, we present the lightest ViT trained from scratch to achieve ~93% accuracy on CIFAR-10 within 50 epochs — to the best of our knowledge, this represents the highest accuracy achieved with under 2.5M parameters and under 100 training epochs in the literature.
+## 🚀 Introduction
+In this repo, we present the lightest Vision Transformer (ViT) trained from scratch to achieve ~93% accuracy on CIFAR-10 within just 50 epochs.  
+To the best of our knowledge, this is the highest accuracy ever reported with the **lowest compute** and **fastest training time** in the literature for ViTs trained from scratch on CIFAR-10.
