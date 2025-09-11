@@ -53,7 +53,6 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 | CvT-13           | 20+       | *Fill*    | 98.1        | 300    | Convolutional Vision Transformer |
 | Vanilla ViT-Tiny | 5.7       | *Fill*    | ~78.0       | 300    | Poor performance without pretraining |
 | DeiT-Tiny        | 5.7       | *Fill*    | 79.8        | 300    | Requires strong augmentations + distillation |
-| ResNet-18        | 11.2      | *Fill*    | ~94.0       | 200    | Strong CNN baseline |
 
 > **Key Takeaway:** Our model achieves competitive accuracy with **lowest parameter count and compute cost** among ViT-like models trained from scratch on CIFAR-10 within only 50 epochs.
 
