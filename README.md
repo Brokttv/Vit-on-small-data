@@ -28,6 +28,6 @@ Vision Transformers (ViTs) are among the most impactful architectural innovation
 | **Optimizer**          | AdamW (`lr=2e-3`, `weight_decay=0.001`, `betas=(0.9, 0.999)`, `eps=1e-8`) |
 | **Scheduler**          | Cosine Decay with Warmup (`warmup_steps=20000`, `total_steps=78125`) |
 | **Mixup**              | `alpha=0.1` (λ ~ Beta(α,α)), applied to every training batch via `mixup_data(x, y, alpha=0.1, device='cuda')`. Returns `(mixed_x, y_a, y_b, lam)` and uses a random permutation for pairing. |
-| **Loss Function**      | `CrossEntropyLoss` combined with `mixup_criterion(loss_fn, pred, y_a, y_b, lam)` (i.e. `lam * L(pred,y_a) + (1-lam) * L(pred,y_b)`) |
+| **Loss Function**      | `CrossEntropyLoss` combined with `mixup_criterion(loss_fn, pred, y_a, y_b, lam)` |
 | **Gradient Clipping**  | `clip_grad_norm_(model.parameters(), max_norm=1.0)` |
 | **Random Seed**        | `42` |
