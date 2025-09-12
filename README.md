@@ -50,7 +50,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 |------------------|-----------|-----------|-------------|--------|-------|
 | **Our ViT (CNN-Patchified)** | **2.3**     | *300M*    | **93.32** | **50** | Trained from scratch with CNN patch embed |
 | CCT-14/7x2       | 3.76       | 2.38G    | 96.53        | 300    | Trained from scratch with CNN patch embed, and sequence pooling replacing the CLS token |
-| CvT-13           | 20+       | *Fill*    | 98.1        | 300    | Convolutional Vision Transformer |
+| Add-ViT           | 26.8       | *Fill*    | 94.97        | 300    | Convolutional Vision Transformer |
 | Vanilla ViT-Tiny | 5.7       | *Fill*    | ~78.0       | 300    | Poor performance without pretraining |
 | DeiT-Tiny        | 5.7       | *Fill*    | 79.8        | 300    | Requires strong augmentations + distillation |
 
