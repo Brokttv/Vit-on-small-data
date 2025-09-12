@@ -43,6 +43,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 | **Gradient Clipping**  | `clip_grad_norm_(model.parameters(), max_norm=1.0)` |
 | **Random Seed**        | `42` |
 
+<br>
 
 ## Model Comparison
 
