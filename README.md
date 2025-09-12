@@ -53,9 +53,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 | Add-ViT           | 26.8       | *4.36G*    | 94.97        | 300    | [paper](https://link.springer.com/article/10.1007/s11063-024-11643-8) |
  |
 | Vanilla ViT-Tiny | 5.7       | *Fill*    | ~78.0       | 300    | Poor performance without pretraining |
-| DeiT-Tiny        | 5.7       | *Fill*    | 79.8        | 300    | Requires strong augmentations + distillation |
 
-> **Key Takeaway:** Our model achieves competitive accuracy with **lowest parameter count and compute cost** among ViT-like models trained from scratch on CIFAR-10 within only 50 epochs.
 
 
 
