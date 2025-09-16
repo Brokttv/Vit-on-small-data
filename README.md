@@ -74,7 +74,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 | **Gradient clipping** | Best value was 1, but overall effect was minimal. |
 | **Step LR scheduler** | Accuracy peaked around ~87%, no breakthrough. |
 | **CutMix** | Did not outperform Mixup within 50 epochs; requires longer training. |
-
+| **torch.backends.cudnn.deterministic=True** and **torch.backends.cudnn.benchmark=False**|  Slightly decreases accuracy by ~0.20%.  |
 
 
 
