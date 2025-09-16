@@ -17,7 +17,9 @@ In contrast, Convolutional Neural Networks (CNNs) excel at extracting high-level
 
 To address this gap, we replaced the raw linear patchification step in vanilla ViTs with a **3-block CNN-based patch embedding**. This small change introduces inductive bias from the very first layer, resulting in **faster convergence** and **better accuracy** on small datasets such as CIFAR-10.
 
-<br>
+---
+
+
 
 ## 📐 Experiment Configuration
 
