@@ -45,7 +45,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 
 <br>
 
-## Model Comparison
+## Models Comparison
 
 | Model            | Params (M) | FLOPs  | Accuracy (%) | Epochs | source |
 |------------------|-----------|-----------|-------------|--------|-------|
