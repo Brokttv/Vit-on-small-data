@@ -53,6 +53,26 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 | CCT-14/7x2       | 3.76       | 2.38G    | 96.53        | 300    | [paper](https://arxiv.org/pdf/2104.05704)|
 | Add-ViT           | 26.8       | *4.36G*    | 94.97        | 300    | [paper](https://link.springer.com/article/10.1007/s11063-024-11643-8) |
 
+<br>
+
+## Things I Tried (But Didn't Work)
+
+| Experiment | Observation / Result |
+|-----------|---------------------|
+| **Two CLS tokens** | No accuracy improvement observed. |
+| **Different weight decay factors (0.5, 0.6, 0.3, 0.4)** | No significant difference compared to default (however, accuracy slightly decreased with values other than 0.5). |
+| **Mixup with different α values** | 0.2 was the sweet spot — others performed worse. |
+| **Bigger batch sizes (64, 128)** | No performance gains. |
+| **Embedding sizes (192 → 768)** | high compute cost, accuracy acheived a max of 90% with larger values (ended up going with 192). |
+| **MLP size (4× embedding size)** | Underperformed compared to 6× embedding size (which I adopted). |
+| **Two convolution blocks for patching** | Reduced spatial feature extraction — worse accuracy. |
+| **Learning rates (3e-4 → 3e-3)** | Best stability/accuracy around mid-range LR (went with 1e-3); extremes hurt performance. |
+| **Different heads/layers configurations** <br>*(3,3), (4,4), (6,6), (4,8), (2,3), (8,12)* | best was (2,2), other combos did not cross the 90% acc bar. |
+| **Attention dropout (0.01)** | Negligible effect on accuracy. |
+| **Gradient clipping** | Best value was 1, but overall effect was minimal. |
+| **Step LR scheduler** | Accuracy peaked around ~87%, no breakthrough. |
+| **CutMix** | Did not outperform Mixup within 50 epochs; requires longer training. |
+
 
 
 
