@@ -59,7 +59,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 
 <br>
 
-## ❌ Things I Tried (But Didn't Work)
+## ❌ Things we Tried (But Didn't Work)
 
 | Experiment | Observation / Result |
 |-----------|---------------------|
