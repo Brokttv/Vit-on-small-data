@@ -45,7 +45,6 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 
 <br>
 
-## Models Comparison
 
 ## 📊 Models Comparison
 
