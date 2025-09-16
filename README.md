@@ -47,11 +47,14 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 
 ## Models Comparison
 
-| Model            | Params (M) | FLOPs  | Accuracy (%) | Epochs | source |
-|------------------|-----------|-----------|-------------|--------|-------|
-| **Our ViT (CNN-Patchified)** | **2.3**     | **300M**    | **93.32** | **50** | Trained from scratch with CNN patch embed |
-| CCT-14/7x2       | 3.76       | 2.38G    | 96.53        | 300    | [paper](https://arxiv.org/pdf/2104.05704)|
-| Add-ViT           | 26.8       | *4.36G*    | 94.97        | 300    | [paper](https://link.springer.com/article/10.1007/s11063-024-11643-8) |
+## 📊 Models Comparison
+
+| Model                | Params (M) | FLOPs  | Accuracy (%) | Epochs | Source | Key Differences from Base ViT |
+|----------------------|-------------|--------|---------------|---------|--------|----------------------------------|
+| **Our ViT (CNN-Patchified)** | **2.3**       | **300M** | **93.32**     | **50**   | Trained from scratch | Replaces raw patches with CNN-based patch embedding (adds inductive bias); rest of architecture similar to standard ViT |
+| CCT-14/7x2           | 3.76        | 2.38G  | 96.53          | 300     | [paper](https://arxiv.org/pdf/2104.05704) | Uses convolutional tokenization; sequence-pooling; convolutional token embedding and projection; reduces tokens hierarchically; retains linear Q/K/V in MSA |
+| Add-ViT              | 26.8        | *4.36G*| 94.97          | 300     | [paper](https://link.springer.com/article/10.1007/s11063-024-11643-8) | Several additions:  <ul><li>**Add-Embedding**: progressive tokenization with overlapping sliding local blocks (OUTE), token reshape to preserve local detail, feature supplementation with conv layers so patch embedding preserves local features.</li><li>**Convolutional Prediction Module (Add-Attn / PMSA)**: shortcut to connect previous layer’s attention map to guide current MSA, thereby introducing prior knowledge into attention map prediction.</li><li>**Add-Conv (depthwise separable convolution unit)** inside each transformer block as a local spatial context module.</li><li>**Feature augmentation** via ECA (efficient channel attention) within embedding and add-conv units to enhance channel interactions.</li></ul> |
+
 
 <br>
 
