@@ -19,7 +19,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 
 <br>
 
-## 🎫 Experiment Configuration
+## 📐 Experiment Configuration
 
 | **Component**          | **Value** |
 |------------------------|-----------|
