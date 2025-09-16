@@ -50,7 +50,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 
 | Model                | Params (M) | FLOPs  | Accuracy (%) | Epochs | Source | Key Differences from Base ViT |
 |----------------------|-------------|--------|---------------|---------|--------|----------------------------------|
-| **Our ViT (CNN-Patchified)** | **2.3**       | **300M** | **93.32**     | **50**   | [Google Colab](https://colab.research.google.com/drive/1h3izwUoPyt32RBHETmTsk0GpiQ-N4-Yh?usp=sharing) | Only replaces raw patches with CNN-based patch embedding (adds inductive bias); rest of architecture similar to standard ViT |
+| **Our ViT (CNN-Patchified)** | **2.38**       | **300M** | **93.32**     | **50**   | [Google Colab](https://colab.research.google.com/drive/1h3izwUoPyt32RBHETmTsk0GpiQ-N4-Yh?usp=sharing) | Only replaces raw patches with CNN-based patch embedding (adds inductive bias); rest of architecture similar to standard ViT |
 | CCT-14/7x2           | 3.76        | 2.38G  | 96.53          | 300     | [paper](https://arxiv.org/pdf/2104.05704) | Uses convolutional tokenization; sequence-pooling; convolutional token embedding and projection; reduces tokens hierarchically; retains linear Q/K/V in MSA |
 | Add-ViT              | 26.8        | *4.36G*| 94.97          | 300     | [paper](https://link.springer.com/article/10.1007/s11063-024-11643-8) | **Several additions:**  Add-Embedding; Convolutional Prediction Module (Add-Attn / PMSA); Add-Conv (depthwise separable convolution unit); Feature augmentation via ECA (efficient channel attention).</li></ul> |
 
