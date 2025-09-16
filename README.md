@@ -39,7 +39,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 | **MLP Dropout**        | `0.1` |
 | **Embedding Dropout**  | `0.1` |
 | **Optimizer**          | AdamW (`lr=2e-3`, `weight_decay=0.001`, `betas=(0.9, 0.999)`, `eps=1e-8`) |
-| **Scheduler**          | Cosine Decay with Warmup (`warmup_steps=20000`, `total_steps=78125`) |
+| **Scheduler**          | Cosine Decay with Warmup (`warmup_steps=21000`, `total_steps=78125`) |
 | **Mixup**              | `alpha=0.2` (λ ~ Beta(α,α)), applied to every training batch via `mixup_data(x, y, alpha=0.2, device='cuda')`. Returns `(mixed_x, y_a, y_b, lam)` and uses a random permutation for pairing. |
 | **Loss Function**      | `CrossEntropyLoss` combined with `mixup_criterion(loss_fn, pred, y_a, y_b, lam)` |
 | **Gradient Clipping**  | `clip_grad_norm_(model.parameters(), max_norm=1.0)` |
@@ -52,7 +52,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 
 | Model                | Params (M) | FLOPs  | Accuracy (%) | Epochs | Source | Key Differences from Base ViT |
 |----------------------|-------------|--------|---------------|---------|--------|----------------------------------|
-| **Our ViT (CNN-Patchified)** | **2.38**       | **300M** | **93.43**     | **50**   | [Google Colab](https://colab.research.google.com/drive/1h3izwUoPyt32RBHETmTsk0GpiQ-N4-Yh?usp=sharing) | Only replaces raw patches with CNN-based patch embedding (adds inductive bias); rest of architecture similar to standard ViT |
+| **Our ViT (CNN-Patchified)** | **2.38**       | **300M** | **93.42**     | **50**   | [Google Colab](https://colab.research.google.com/drive/1h3izwUoPyt32RBHETmTsk0GpiQ-N4-Yh?usp=sharing) | Only replaces raw patches with CNN-based patch embedding (adds inductive bias); rest of architecture similar to standard ViT |
 | CCT-14/7x2           | 3.76        | 2.38G  | 96.53          | 300     | [paper](https://arxiv.org/pdf/2104.05704) | Uses convolutional tokenization; sequence-pooling; convolutional token embedding and projection; reduces tokens hierarchically; retains linear Q/K/V in MSA |
 | Add-ViT              | 26.8        | *4.36G*| 94.97          | 300     | [paper](https://link.springer.com/article/10.1007/s11063-024-11643-8) | **Several additions:**  Add-Embedding; Convolutional Prediction Module (Add-Attn / PMSA); Add-Conv (depthwise separable convolution unit); Feature augmentation via ECA (efficient channel attention).</li></ul> |
 
