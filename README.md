@@ -74,6 +74,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 | **Gradient clipping** | Best value was 1, but overall effect was minimal. |
 | **Step LR scheduler** | Accuracy peaked around ~87%, no breakthrough. |
 | **CutMix** | Did not outperform Mixup within 50 epochs; requires longer training. |
+| **Wrmup_steps in the scheduler** |  Initially, 3% of the total steps (≈2,344) were used for learning rate warmup, but accuracy plateaued at 92%. Increasing the warmup steps to 20,000 (≈8.5× larger) unlocked better convergence and improved accuracy. Note that using even larger warmup steps than this will likely hurt performance.
 | **torch.backends.cudnn.deterministic=True** and **torch.backends.cudnn.benchmark=False**|  Slightly decreases accuracy by ~0.20%.  |
 
 
