@@ -94,6 +94,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 | **torch.backends.cudnn.deterministic=True** and **torch.backends.cudnn.benchmark=False**|  Slightly decreases accuracy by ~0.20%.  |
 > PS: Although I don't have the resources to try that, but training for longer steps (100--->300 epochs) will likely yield accuracy gains if model's config is tuned accordingly!
 
+
 ---
 ## Requirements
 
