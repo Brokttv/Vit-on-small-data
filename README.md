@@ -84,21 +84,32 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 ---
 ## Requirements
 
-- Python 3.7+
-- PyTorch
+- torch
 - torchvision
-- pandas
-- PIL (Pillow)
-- YOLOv5 weights (e.g., `yolov5s.pt`)
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
 
+---
 
 ## Setup
 
-Install the required Python packages using:
+Clone the repository:
 
+
+      git clone https://github.com/Brokttv/Vit-on-small-data.git
+      cd Vit-on-small-data
+
+
+
+Install the required Python packages using:
    
     
     pip install -r requirements.txt
+
+
+
 
 ## Usage
 
