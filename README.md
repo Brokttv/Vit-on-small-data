@@ -56,7 +56,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 
 - confusion matrix:
 <p align="center">
-  <img src="confusion_matrix.jpeg" width="500"/>
+  <img src="confusion_matrix.jpeg" width="600"/>
 </p>
 
 <br>
