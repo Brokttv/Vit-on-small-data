@@ -82,6 +82,24 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 > PS: Although I don't have the resources to try that, but training for longer steps (100--->300 epochs) will likely yield accuracy gains if model's config is tuned accordingly!
 
 ---
+## Requirements
+
+- Python 3.7+
+- PyTorch
+- torchvision
+- pandas
+- PIL (Pillow)
+- YOLOv5 weights (e.g., `yolov5s.pt`)
+
+
+## Setup
+
+Install the required Python packages using:
+
+   
+    
+    pip install -r requirements.txt
+
 ## Usage
 
 Run the training script from the command line. You can override default parameters using command-line arguments:
