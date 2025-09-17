@@ -64,6 +64,7 @@ To address this gap, we replaced the raw linear patchification step in vanilla V
 <br>
 
 ## 📊 Models Comparison
+Although there are a quite few repos/papers reporting accuarcies on Vits trained from scratch. However, to avoid redundancy, we pick the top models on all metrics to compare against:
 
 | Model                | Params (M) | FLOPs  | Accuracy (%) | Epochs | Source | Key Differences from Base ViT |
 |----------------------|-------------|--------|---------------|---------|--------|----------------------------------|
