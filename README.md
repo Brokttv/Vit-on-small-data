@@ -128,5 +128,21 @@ Install the required Python packages using:
 
 Run the training script from the command line. You can override default parameters using command-line arguments:
 
-```bash
-python train_vit.py --epochs 50 --batch-size 32 --lr 1e-3 --device cuda
+
+    python train_vit.py --epochs 50 --batch-size 32 --lr 1e-3 --device cuda
+
+---
+
+
+## 📑 Citation
+
+If you find this work useful, please cite it as:
+
+```bibtex
+@misc{brokttv2025vit,
+  title        = {ViT-on-Small-Data: Lightweight Vision Transformer (2.3M params) achieving ≈ 93% CIFAR-10 accuracy in 50 epochs},
+  author       = {Brokttv},
+  year         = {2025},
+  howpublished = {\url{https://github.com/Brokttv/Vit-on-small-data}},
+}
+
