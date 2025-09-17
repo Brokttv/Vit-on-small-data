@@ -141,7 +141,7 @@ If you find this work useful, please cite it as:
 
 ```bibtex
 @misc{brokttv2025vit,
-  title        = {ViT-on-Small-Data: Lightweight Vision Transformer (2.3M params) achieving ≈ 93% CIFAR-10 accuracy in 50 epochs},
+  title        = {ViT-on-Small-Data: Lightweight Vision Transformer (2.38M params) achieving ≈ 93% CIFAR-10 accuracy in 50 epochs},
   author       = {Brokttv},
   year         = {2025},
   howpublished = {\url{https://github.com/Brokttv/Vit-on-small-data}},
